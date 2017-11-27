@@ -17,35 +17,25 @@ public class BlurController {
 
 	
 	@FXML
-    public void setclip() {           
+    public void setclip() {  
+		
         ellipse = new Ellipse();
-//        circle = new Circle((imageView.getFitWidth())*0.2);
-
         ellipse.centerXProperty().setValue(95);
         ellipse.centerYProperty().setValue(70);
         ellipse.radiusXProperty().setValue(70);
-        ellipse.radiusYProperty().setValue(70);
-        
-//        importing and modifying sizes
-//    	ellipse.radiusXProperty().setValue(imageView.getFitWidth()*0.1);
-//    	ellipse.radiusYProperty().setValue(imageView.getFitHeight()*0.17);
-        
+        ellipse.radiusYProperty().setValue(70);        
         imageView.setClip(ellipse);
-
-////apply a shadow effect.
-//        imageView.setEffect(new DropShadow(120, Color.BLACK));
-
     }
 
 	@FXML
     public void setblur() {           
-             imageView.setEffect(new GaussianBlur(10));
+        imageView.setEffect(new GaussianBlur(10));
     }
 	
 	@FXML
 	private void handleClose() {
 	
-	        System.exit(0);
+	    System.exit(0);
 	}
 	
 }

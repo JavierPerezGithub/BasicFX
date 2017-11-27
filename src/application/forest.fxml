@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="477.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BlurController">
+<AnchorPane id="AnchorPane" prefHeight="279.0" prefWidth="626.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BlurController">
   <children>
-    <ImageView fx:id="imageView" fitHeight="224.0" fitWidth="400.0" layoutX="29.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@blueforest.jpg" />
-         </image>
-    </ImageView>
-      <Button layoutX="389.0" layoutY="263.0" mnemonicParsing="false" onAction="#setclip" text="Clip" />
-      <Button layoutX="344.0" layoutY="263.0" mnemonicParsing="false" onAction="#setblur" text="Blur" />
+      <GridPane alignment="CENTER" prefHeight="366.0" prefWidth="698.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="602.0" minWidth="0.0" prefWidth="551.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="189.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+          <ImageView fx:id="imageView" fitHeight="201.0" fitWidth="602.0" pickOnBounds="true">
+               <image>
+                  <Image url="@blueforest.jpg" />
+               </image>
+          </ImageView>
+            <HBox alignment="TOP_RIGHT" prefHeight="0.0" prefWidth="21.0" spacing="10.0" GridPane.rowIndex="1">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#setblur" prefHeight="25.0" prefWidth="54.0" text="Blur" />
+                  <Button mnemonicParsing="false" onAction="#setclip" prefHeight="25.0" prefWidth="54.0" text="Clip" />
+                  <Button mnemonicParsing="false" onAction="#handleClose" prefHeight="25.0" prefWidth="54.0" text="Exit">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets right="30.0" top="10.0" />
+               </GridPane.margin>
+            </HBox>
+         </children>
+      </GridPane>
   </children>
 </AnchorPane>

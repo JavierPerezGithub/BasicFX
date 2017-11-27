@@ -40,7 +40,6 @@ public class Main extends Application {
                 "forest.fxml"
             )
         );
-//    	loader.setController(new SetBlur());
         mypane = (AnchorPane) loader.load();
 
         /**
