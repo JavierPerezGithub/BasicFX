@@ -25,6 +25,9 @@
                <image>
                   <Image url="@blueforest.jpg" />
                </image>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
           </ImageView>
             <HBox alignment="TOP_RIGHT" prefHeight="0.0" prefWidth="21.0" spacing="10.0" GridPane.rowIndex="1">
                <children>
@@ -42,6 +45,9 @@
                <GridPane.margin>
                   <Insets right="30.0" top="10.0" />
                </GridPane.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
             </HBox>
          </children>
       </GridPane>
